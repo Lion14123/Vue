@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue3.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Encuesta de Programación</h1></header>
+    <section id="encuesta">
+        <article>
+            <h2>¿Te gustan los deportes?</h2>
+            <span>
+                <input type="radio" name="inicio" @click="cambiar">Si
+                <input type="radio" name="inicio" @click="cambiar">No
+            </span>
+            <span v-if="mostrar == true">
+                <br>¿A que edad te empexaste a interesar los deprotes?
+                <br><input type="number" v-model="numero" @click="texto">
+                <span v-if="edad">
+                    <h2>Ok, cuentame mas hacerca de ese interes</h2>
+                    <input type="text" id="texto">
+                </span>
+                <br>¿Cuales deportes conoces?
+                <br><input type="text" v-model="deporte">
+                <br><button @click="agregar">Agregar</button>
+                <div v-for="lista in arreglo" :key="lista">{{ lista }}</div>
+            </span>
+            <span v-if="mostrar == false">
+                <p>{{mensaje}}</p>
+            </span>
+        </article>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

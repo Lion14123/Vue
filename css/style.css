@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #166e1a;
+}
+header{
+    position: absolute;
+    width: 100%;
+    background-color: darkblue;
+    text-align: center;
+}
+#texto{
+    width: 600px;
+    height: 100px;
+}
+#encuesta{
+    margin-top: 150px;
+    text-align: center;
+    width: 700px;
+    background-color: #fff;
+    border: 2px solid black;
+}
+article, span, h1{
+    background-color: #fff;
+}
